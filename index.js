@@ -1,3 +1,5 @@
+var PORT = process.env.PORT || 3000;
+
 var express = require("express");
 var app = express();
 var router = express.Router();
@@ -17,6 +19,6 @@ router.get("/contact",function(req,res){
   res.sendFile(path + "contact.html");
 });
 
-app.listen(3001,function(){
-  console.log("Live at Port 3001");
+app.listen(PORT,function(){
+  console.log("Live at Port" + PORT);
 });
